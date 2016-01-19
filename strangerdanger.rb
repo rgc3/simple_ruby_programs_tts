@@ -7,5 +7,5 @@ if answer == 'yes'
 else
 	3.times do
 		puts 'STRANGER DANGER!'
-end
+	end
 end
