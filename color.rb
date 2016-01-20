@@ -5,3 +5,7 @@ if color == 'blue' || color == 'green'
 else
 	puts color.capitalize + '! Really, that\'s your favorite color?'
 end
+
+#interpolate the else statement this way 
+#else
+#puts "#{color}! Really, that\'s your favorite color?"
