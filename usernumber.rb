@@ -13,7 +13,7 @@ until response == 'done'
 	puts 'Give me some numbers, type done when you want'
 	response = gets.chomp
 	if response != 'done'
-		addition = response.to_i
-		puts newnum += addition
+		input = response.to_i
+		puts newnum += input
 	end
 end
