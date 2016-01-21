@@ -4,8 +4,8 @@
 
 # My attempt below
 
-puts 'Please provide me with a number'
-num = gets.chomp.to_i
+# puts 'Please provide me with a number'
+# num = gets.chomp.to_i
 
 
 
