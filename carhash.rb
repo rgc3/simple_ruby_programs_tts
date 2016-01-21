@@ -17,3 +17,13 @@ puts "Oh, you drive a #{}? That's a #{}, right?"
 
 
 # Solution below
+
+cars = {'Chevy' => 'Corvette', 'Ford' => 'Galaxy', 'Dodge' => 'Charger', 'Nissan' => 'GTR'}
+puts 'What model car do you drive?'
+make = gets.chomp.capitalize
+cars.each do |key,value|
+	if make == value
+		puts "Oh, you drive a #{value}, that's a #{key}, right?"
+	end
+end
+
