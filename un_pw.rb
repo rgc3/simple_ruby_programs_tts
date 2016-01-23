@@ -15,18 +15,21 @@ un = gets.chomp.downcase
 upass.each.do |key,value|
 
 if un == key
-# if password matches hash ask for password
+# if username matches a UN in hash ask for password
 	puts 'Please enter your password.'
 # save user's password
 pw = gets.chomp.downcase
 
-# if username does not match hash
+# if username does not match any username's in hash
 else
 	puts 'Sorry, username is not recognized.'
+
+# if password matches username
+
+puts 'Access granted'
 
 
 
 # if password does not match username
-else
 
 puts 'ACCESS DENIED!'
