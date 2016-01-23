@@ -4,13 +4,25 @@
 # after which access will be granted if they inputed the matching PW, 
 # otherwise: ACCESS DENIED!
 
+
+# usernames and passwords created by me
 upass = {'fred1' => '12345', 'donut77' => 'yummy14', 'redrocket' => 'opensesame'}
+# ask for username
 puts 'Please enter your username'
-
+# save user's un
 un = gets.chomp.downcase
+# compare user's un to hash
+upass.each.do |key,value|
 
-puts 'Please enter your password'
-
+if un == key
+# if password matches hash ask for password
+	puts 'Please enter your password.'
+# save users password
 pw = gets.chomp.downcase
+
+
+
+# if password does not match username
+else
 
 puts 'ACCESS DENIED!'
