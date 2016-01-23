@@ -5,31 +5,35 @@
 # otherwise: ACCESS DENIED!
 
 
-# usernames and passwords created by me
-upass = {'fred1' => '12345', 'donut77' => 'yummy14', 'redrocket' => 'opensesame'}
-# ask for username
-puts 'Please enter your username'
-# save user's un
-un = gets.chomp.downcase
-# compare user's un to hash
-upass.each.do |key,value|
+
+upass = {'fred1' => '12345', 'donut77' => 'yummy14', 'redrocket' => 'opensesame'} # usernames and passwords created by me
+
+puts 'Please enter your username' # ask for username
+
+un = gets.chomp.downcase # save user's un
+
+upass.each.do |key,value| # compare user's un to hash
 
 if un == key
-# if username matches a UN in hash ask for password
-	puts 'Please enter your password.'
-# save user's password
-pw = gets.chomp.downcase
 
-# if username does not match any username's in hash
+	puts 'Please enter your password.' # if username matches a UN in hash ask for password
+
+pw = gets.chomp.downcase # save user's password
+
 else
-	puts 'Sorry, username is not recognized.'
+	puts 'Sorry, username is not recognized.' # if username does not match any username's in hash
 
-# if password matches username
+end
 
-puts 'Access granted'
+if pw == value
+
+puts 'Access granted' # if password matches username
+
+else
+
+puts 'ACCESS DENIED!' # if password does not match username
+
+end
 
 
 
-# if password does not match username
-
-puts 'ACCESS DENIED!'
