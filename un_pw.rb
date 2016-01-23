@@ -17,8 +17,12 @@ upass.each.do |key,value|
 if un == key
 # if password matches hash ask for password
 	puts 'Please enter your password.'
-# save users password
+# save user's password
 pw = gets.chomp.downcase
+
+# if username does not match hash
+else
+	puts 'Sorry, username is not recognized.'
 
 
 
