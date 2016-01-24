@@ -12,22 +12,22 @@ puts 'Please enter your username' # ask for username
 
 un = gets.chomp.downcase # save user's un
 
-upass.each.do |key,value| # compare user's un to hash
+upass.each do |key,value| # compare user's un to hash
 
 if un == key
 
 	puts 'Please enter your password.' # if username matches a UN in hash ask for password
 
-pw = gets.chomp.downcase # save user's password
+	if pw == value
 
-else
-	puts 'Sorry, username is not recognized.' # if username does not match any username's in hash
+		pw = gets.chomp.downcase # save user's password
 
-end
+		puts 'Access granted' # if password matches username
 
-if pw == value
+	else
+		puts 'Sorry, username is not recognized.' # if username does not match any username's in hash
 
-puts 'Access granted' # if password matches username
+	end
 
 else
 

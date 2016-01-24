@@ -7,12 +7,12 @@
 
 # My attempt below
 
-cars = {'Chevy' => 'Corvette', 'Ford' => 'Galaxy', 'Dodge' => 'Charger', 'Nissan' => 'GTR'}
-puts 'What model car do you drive?'
-model = gets.chomp.capitalize
-if name == #{cars[Chevy]}
+# cars = {'Chevy' => 'Corvette', 'Ford' => 'Galaxy', 'Dodge' => 'Charger', 'Nissan' => 'GTR'}
+# puts 'What model car do you drive?'
+# model = gets.chomp.capitalize
+# if name == #{cars[Chevy]}
 
-puts "Oh, you drive a #{}? That's a #{}, right?"
+# puts "Oh, you drive a #{}? That's a #{}, right?"
 
 
 
