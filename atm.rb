@@ -95,10 +95,6 @@ end
 	else
 		puts 'I\'m sorry that was not one of your options.'
 	end
+
 		
-
-
-
-	
-
-
+		
