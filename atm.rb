@@ -45,30 +45,51 @@ class Account
 
 end
 
-all_customers = []
+# all_customers = []
 
 customer = Account.new('Bill Jones', 10000, '1234')
 
-all_customers.push(customer)
+# all_customers.push(customer)
 
-customer = Account.new('Sally Reynolds', 55000, '4321')
+# customer = Account.new('Sally Reynolds', 55000, '4321')
 
-all_customers.push(customer)
+# all_customers.push(customer)
 
-customer = Account.new('Fred Thomas', 249000, '1965')
+# customer = Account.new('Fred Thomas', 249000, '1965')
 
-all_customers.push(customer)
+# all_customers.push(customer)
 
 
 
 puts "Hello. What is your name?"
 
-puts "Welcome, #{customer.name}. What would you like to do? To receive your balance, type balance. 
-To make a deposit, type deposit. To make a withdrawal, type withdraw."
+
+# could not figure out how to ask and verify PIN before individual transactions so trying to get PIN first
+puts "Welcome, #{customer.name}. Please enter your PIN."
+
+
+puts 'What would you like to do? To receive your balance, type balance. 
+To make a deposit, type deposit. To make a withdrawal, type withdraw.'
 
 transaction = gets.chomp.downcase
 
-# if transaction = 'balance'
-#	puts 'Please enter your PIN.'
+if transaction == 'balance'
+	display_balance
+elsif transaction == 'deposit'
+	puts 'How much would you like to deposit today?'
+	dep = gets.chomp
+	puts "Your balance after today's deposit is $#{deposit}."
+elsif transaction == 'withdraw'
+	puts 'How much would you like to withdraw today?'
+	wd = gets.chomp
+	puts "Your balance after today's withdrawal is $#{withdraw}."
+else
+	puts 'I\'m sorry that was not one of your options.'
+end
+		
+		
+
+
+	
 
 
