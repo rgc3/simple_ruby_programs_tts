@@ -61,33 +61,41 @@ customer = Account.new('Bill Jones', 10000, '1234')
 
 
 
-puts "Hello. What is your name?"
+puts "Hello. What is your name?" # not sure how to compare name to what's on file
+
 
 
 # could not figure out how to ask and verify PIN before individual transactions so trying to get PIN first
 puts "Welcome, #{customer.name}. Please enter your PIN."
 
+pn = gets.chomp.to_s
 
-puts 'What would you like to do? To receive your balance, type balance. 
-To make a deposit, type deposit. To make a withdrawal, type withdraw.'
+if pn == pin
 
-transaction = gets.chomp.downcase
+	puts 'What would you like to do? To receive your balance, type balance. 
+	To make a deposit, type deposit. To make a withdrawal, type withdraw.'
 
-if transaction == 'balance'
-	display_balance
-elsif transaction == 'deposit'
-	puts 'How much would you like to deposit today?'
-	dep = gets.chomp
-	puts "Your balance after today's deposit is $#{deposit}."
-elsif transaction == 'withdraw'
-	puts 'How much would you like to withdraw today?'
-	wd = gets.chomp
-	puts "Your balance after today's withdrawal is $#{withdraw}."
 else
-	puts 'I\'m sorry that was not one of your options.'
+	pin_error
 end
+
+	transaction = gets.chomp.downcase
+
+	if transaction == 'balance'
+		display_balance
+	elsif transaction == 'deposit'
+		puts 'How much would you like to deposit today?'
+		dep = gets.chomp
+		puts "Your balance after today's deposit is $#{deposit}."
+	elsif transaction == 'withdraw'
+		puts 'How much would you like to withdraw today?'
+		wd = gets.chomp
+		puts "Your balance after today's withdrawal is $#{withdraw}."
+	else
+		puts 'I\'m sorry that was not one of your options.'
+	end
 		
-		
+
 
 
 	
