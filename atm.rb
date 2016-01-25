@@ -14,6 +14,7 @@ class Account
 		@pin = pin
 	end
 
+# not sure if I have to define these methods (line 18-28)
 	def name
 		@name
 	end
@@ -39,7 +40,7 @@ class Account
 	end
 
 	def pin_error(pn)
-		@pin != pn
+		@pin != pn # might not need this if it's determined in if statements that it does not match
 		puts 'Access denied: incorrect PIN.'
 	end
 
