@@ -14,6 +14,18 @@ class Account
 		@pin = pin
 	end
 
+	def name
+		@name
+	end
+
+	def balance
+		@balance
+	end
+
+	def pin
+		@pin
+	end
+
 	def display_balance
 		puts @balance
 	end
@@ -33,9 +45,30 @@ class Account
 
 end
 
+all_customers = []
+
 customer = Account.new('Bill Jones', 10000, '1234')
+
+all_customers.push(customer)
+
+customer = Account.new('Sally Reynolds', 55000, '4321')
+
+all_customers.push(customer)
+
+customer = Account.new('Fred Thomas', 249000, '1965')
+
+all_customers.push(customer)
+
+
 
 puts "Hello. What is your name?"
 
 puts "Welcome, #{customer.name}. What would you like to do? To receive your balance, type balance. 
 To make a deposit, type deposit. To make a withdrawal, type withdraw."
+
+transaction = gets.chomp.downcase
+
+# if transaction = 'balance'
+#	puts 'Please enter your PIN.'
+
+
