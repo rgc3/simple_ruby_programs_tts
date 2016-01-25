@@ -1,0 +1,1 @@
+# Write a program that prompts you for a String and then outputs the length of the String.
