@@ -27,18 +27,21 @@ class Account
 	end
 
 	def pin_error
-		puts 'Access denied: incorrect PIN.'
+		'Access denied: incorrect PIN.'
 	end
+
+end
 
 	def enter_name
 		puts "Hello. What is your name?"
 		nm = gets.chomp.downcase
 		if nm == @name
-			puts puts "welcome #{customer.name}. What would you like to do today? To receive your balance, type balance. 
+			puts "welcome #{@name}. What would you like to do today? To receive your balance, type balance. 
 			To make a deposit, type deposit. To make a withdrawal, type withdraw."
 		else
 			puts 'Sorry, cannot find your account.'
 		end
+	end
 
 	def display_balance
 		puts 'Please enter your PIN.'
@@ -50,7 +53,7 @@ class Account
 		end
 	end
 
-	def withdraw(wd)
+	def withdraw
 		puts 'Please enter your PIN.'
 		pn = gets.chomp.to_s
 		if pn != @pin
@@ -62,7 +65,7 @@ class Account
 		end	
 	end
 
-	def deposit(dep)
+	def deposit
 		puts 'Please enter your PIN.'
 		pn = gets.chomp.to_s
 		if pn != @pin
@@ -71,22 +74,23 @@ class Account
 			puts 'How much would you like to deposit today?'
 			dep = gets.chomp.to_i
 			puts "Your balance after today's deposit is $#{@balance += dep}."	
+		end
 	end
-end
 
 
-customer = Account.new('Bill Jones', 10000, '1234')
 
-enter_name
+customer = Account.new('bill jones', 10000, '1234')
+
+customer.enter_name
 
 transaction = gets.chomp.downcase
 
 if transaction == 'balance'
-	display_balance
+	customer.display_balance
 elsif transaction == 'deposit'
-	deposit
+	customer.deposit
 elsif transaction == 'withdraw'
-	withdraw
+	customer.withdraw
 else
 	puts 'I\'m sorry, that is not an option.'
 end
