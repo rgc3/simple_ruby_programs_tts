@@ -32,6 +32,8 @@ class Account
 
 end
 
+customer = Account.new('bill jones', 10000, '1234')
+
 	def enter_name
 		puts "Hello. What is your name?"
 		nm = gets.chomp.downcase
@@ -76,10 +78,6 @@ end
 			puts "Your balance after today's deposit is $#{@balance += dep}."	
 		end
 	end
-
-
-
-customer = Account.new('bill jones', 10000, '1234')
 
 customer.enter_name
 
