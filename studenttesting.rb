@@ -24,9 +24,13 @@ class Student
 		@password
 	end
 
-#	def score
-#		@score = 0
-#	end
+# 	def score
+# 		score = 0
+# 	end
+
+# def correct_answer
+# 	score += 25
+# end
 
 	def login
 		puts 'Please login. What\'s your email?'
@@ -57,7 +61,7 @@ class Student
 			test2
 		elsif q1 == 't'
 			puts 'Correct. 25 points.'
-#			@score += 25
+			# correct_answer
 			test2
 		else puts 'Please answer with T or F.'
 			test1
@@ -72,7 +76,7 @@ class Student
 			test3
 		elsif q2 == 'f'
 			puts 'Correct. 25 points.'
-#			@score += 25
+			# correct_answer
 			test3
 		else puts 'Please answer with T or F.'
 			test2
@@ -87,7 +91,7 @@ class Student
 			test4
 		elsif q3 == 't'
 			puts 'Correct. 25 points.'
-#			@score += 25
+			# correct_answer
 			test4
 		else puts 'Please answer with T or F.'
 			test3
@@ -102,7 +106,7 @@ class Student
 			test_complete
 		elsif q4 == 'f'
 			puts 'Correct. 25 points.'
-#			@score += 25
+			# correct_answer
 			test_complete			
 		else puts 'Please answer with T or F.'
 			test4
