@@ -7,13 +7,13 @@
 # end
 
 #Walid's solution
-response = ''
-newnum = 0
+response = '' #empty string to compare response to
+newnum = 0 #0 for something to add to
 until response == 'done'
 	puts 'Give me some numbers, type done when you want'
-	response = gets.chomp
+	response = gets.chomp #response to puts above
 	if response != 'done'
-		input = response.to_i
+		input = response.to_i #if response does not = done, sets new variable "input" = to the users number
 		puts newnum += input
 	end
 end
